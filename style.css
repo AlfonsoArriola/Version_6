@@ -1,0 +1,262 @@
+body{
+	margin: 0 auto;
+    padding: 0 auto;
+    color: #24231d;
+	/*scroll-snap-type: y mandatory;*/
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	overflow-x:hidden;
+	color: #272728;
+}
+
+p{
+    text-indent: 50px;
+    line-height: 30px;
+}
+
+section{
+	padding: 5rem 5rem ;
+	height: calc(100vh - 14rem);
+	/*scroll-snap-align:start;*/
+}
+
+/********     Nav   ***************/
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #cecece; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+   /* box-shadow: 2px 2px 2px 2px black;*/
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color: black;
+}
+/* Mobile Nav */
+nav{
+	display: block;
+    height: 3.5rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: grey;
+    z-index: 3;
+    text-align: center;
+}
+
+button{
+	background: none;
+	border: none;
+	float: left;
+}
+
+nav img{
+	height: 3rem;
+	margin: .25rem;
+}
+/*******************************************************/
+
+.container{
+	display: grid;
+    width: 100%;
+    height: 100vh;
+}
+
+.about p{
+    text-indent: 50px;
+    line-height: 30px;
+}
+
+.about p::first-letter { 
+     font-size: 170%;
+}
+
+
+.ruby{
+/*	background-image: url(images/ruby2.png);*/
+}
+
+.project_odd{
+     display: grid;
+     grid-template-columns: 1.5fr 2fr;
+}
+
+.project_even{
+     display: grid;
+     grid-template-columns: 2fr 1.5fr;	
+}
+
+.project_details{
+	/*background: black;
+	color: white;*/
+}
+
+.project_image{
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+}
+
+.git_n_site{
+	display: flex;
+	justify-content: center;
+}
+
+.project_image img{
+    width: 90%;
+    height: auto;
+    margin: 0% 5%;
+    box-shadow: 9px 6px aliceblue;
+}
+
+.git_n_site a:link, a:visited{
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.35s; 
+    margin: 1rem ;
+    width: 4.5rem;
+    color: black;    
+}
+
+.rez_link{
+	background: DodgerBlue;
+}
+
+.git{
+	background: #ffdc7c;
+}
+
+.site{
+    background: #7cc2ff;
+}
+
+.git:hover, .site:hover, .rez_link:hover{
+    background: #4cffbd;
+    color: LightCyan;
+    border-radius: 50%;
+    font-weight: 1000;
+    text-shadow: .5px .5px DimGray;
+}
+
+/*.react{
+	background-image: url(images/react_bg.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -30% -30%;
+}
+
+.ruby{
+	background-image: url(images/ruby5.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: -80% -80%;
+}
+*/
+footer{
+	height: 8rem;
+	width: 100vw;
+	display: inline-block;
+    padding: 1rem;
+}
+
+footer img{
+    height: 2.4rem;
+    margin: 0rem .7rem;
+}
+
+/*___________  Media Queries  ________________________________*/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-width: 600px) {
+
+	/*.container{
+		margin-top: 12rem;
+	}
+*/
+	section{
+		padding: 16rem 5rem ;
+	}
+
+	.about{
+    margin-bottom: 9rem;
+    }
+
+    .project_even, .project_odd{
+    	grid-template-columns: 1fr;
+    	/*background: gold;*/
+    }
+
+    .project_image{
+    	position: absolute;
+    	margin-top: -3rem;
+    }
+
+    .project_details{
+    	position: relative;
+    	margin-top: 2rem;
+    }
+
+    .project_image img{
+	    width: 80%;
+	    height: auto;
+	    margin: 0% 10%;
+	}
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+@media screen and (max-width: 450px) {
+    .about{
+        margin-bottom: 16rem;
+    }
+
+	.project_image{
+    	margin-top: -5rem;
+    }
+
+    .project_details{
+    	margin-top: 1rem;
+    }
+}
+
+
+
+
+
+
