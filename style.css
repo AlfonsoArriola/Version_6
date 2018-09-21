@@ -97,9 +97,14 @@ nav img{
     height: 100vh;
 }
 
+/*.about{
+    padding: 1rem 2rem;
+}
+*/
 .about p{
     text-indent: 50px;
     line-height: 30px;
+    padding: 0rem 5rem;
 }
 
 .about p::first-letter { 
@@ -171,14 +176,12 @@ figure:hover h3 {
     text-decoration: underline;
 }
 
-
 figcaption {
     position: absolute;
   /*  padding: 1em 2em;*/
     color: black;
  /*   text-align: center;*/
-    top: 0rem;
- 
+    top: 0rem; 
 }
 
 figcaption h3{
@@ -196,7 +199,6 @@ figcaption h3{
     color: white;
  
 }
-
 
 .additional{
    opacity: 0;
@@ -218,7 +220,6 @@ figcaption h3{
     font-weight: bold;
     color: black;
     border-radius: 5px;
-
 }
 
 /*.additional a:last-child{
@@ -227,7 +228,6 @@ figcaption h3{
     color: white;
 
 }*/
-
 
 .project_image img{
     width: 90%;
