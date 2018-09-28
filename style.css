@@ -1,12 +1,20 @@
 body{
 	margin: 0 auto;
     padding: 0 auto;
-    color: #24231d;
+    background: #2a2929;
+    color: #ededed;
 	/*scroll-snap-type: y mandatory;*/
 	overflow-y: scroll;
 	scroll-behavior: smooth;
 	overflow-x:hidden;
-	color: #272728;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 1.2em;
+}
+h1{
+    color: #fbf6f0;
+}
+h1, h3, a{
+    font-family: 'Limelight', cursive;
 }
 
 p{
@@ -30,7 +38,8 @@ section{
     z-index: 4; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #cecece; /* Black*/
+    background: #ec2c2c;
+   /* background-color: #cecece; */
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -42,7 +51,7 @@ section{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #211f1f;
     display: block;
     transition: 0.3s;
 }
@@ -64,13 +73,14 @@ section{
 /* Mobile Nav */
 nav{
 	display: block;
-    height: 3.5rem;
+    height: 4rem;
     position: fixed;
     top: 0;
     width: 100%;
-    background: grey;
+    background: #ec2c2c;
     z-index: 3;
     text-align: center;
+    box-shadow: 1px 1px 1px 1px #f8f2ed;
 }
 
 button{
@@ -91,9 +101,14 @@ nav img{
     height: 100vh;
 }
 
+/*.about{
+    padding: 1rem 2rem;
+}
+*/
 .about p{
     text-indent: 50px;
     line-height: 30px;
+    padding: 0rem 5rem;
 }
 
 .about p::first-letter { 
@@ -126,16 +141,111 @@ nav img{
 	flex-direction: column;
 }
 
-.git_n_site{
-	display: flex;
-	justify-content: center;
+.project_header_image{
+   /* padding: 4em;*/
 }
+
+.project_header_image p{
+    font-size: 1.3em;
+    margin: 0 0 2em 0;
+}
+
+figure{
+    margin: 3px;
+    overflow: hidden;
+    position: relative;
+  /*  background: aliceblue;*/
+    transition:  background .5s;
+}
+
+figure:hover{
+    background: black;
+}
+
+figure:hover img{
+    transform: translate3d(0,0,0) scale(1.3);
+    opacity: .4;
+}
+
+figure:hover .additional {
+    opacity: 1;
+    transform: scale(1);
+}
+
+figure:hover h3 {
+    transform: scale(.7);
+    transition: all .7s ease-in-out;
+    border: none;
+    background: initial;
+    text-decoration: underline;
+}
+
+figcaption {
+    position: absolute;
+  /*  padding: 1em 2em;*/
+    color: black;
+ /*   text-align: center;*/
+    top: 0rem; 
+}
+
+figcaption h3{
+    font-weight: bold;
+    font-size: 2em;
+    background: #ec2828;
+    display: inline-block;
+    padding: .5em .7em;
+    color: white;
+    border: 2px solid white;
+}
+
+.additional a{
+    background: none;
+    color: white;
+ 
+}
+
+.additional{
+   opacity: 0;
+   transform: scale(1.3);
+   transition: all .5s;
+}
+
+.additional p{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.additional a{
+    display: inline-block;
+    background: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: .5em;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+}
+
+/*.additional a:last-child{
+    background: none;
+    border: 1px solid white;
+    color: white;
+
+}*/
 
 .project_image img{
     width: 90%;
     height: auto;
     margin: 0% 5%;
     box-shadow: 9px 6px aliceblue;
+    opacity: .7;
+    transform:  translate3d(0, -20px, 0) scale(1.12);
+    transition: all .5s;
+}
+
+.git_n_site{
+    display: flex;
+    justify-content: center;
 }
 
 .git_n_site a:link, a:visited{
@@ -146,7 +256,7 @@ nav img{
     transition: 0.35s; 
     margin: 1rem ;
     width: 4.5rem;
-    color: black;    
+    color: black;   
 }
 
 .rez_link{
@@ -188,6 +298,7 @@ footer{
 	width: 100vw;
 	display: inline-block;
     padding: 1rem;
+    margin: 7rem 2rem 2rem;
 }
 
 footer img{
@@ -199,7 +310,7 @@ footer img{
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
 	/*.container{
 		margin-top: 12rem;
@@ -235,12 +346,6 @@ footer img{
 	}
 }
 
-@media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-}
-
-
 @media screen and (max-width: 450px) {
     .about{
         margin-bottom: 16rem;
@@ -253,6 +358,18 @@ footer img{
     .project_details{
     	margin-top: 1rem;
     }
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+
+    section{
+        height: 20rem;
+    }
+}
+
+
+
 }
 
 
