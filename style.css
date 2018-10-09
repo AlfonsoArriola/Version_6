@@ -96,7 +96,7 @@ nav img{
 
 .container{
 	display: grid;
-    padding: 0rem 3rem;
+    padding: 0rem 15rem 0rem 0rem;
 }
 
 .about{
@@ -106,7 +106,7 @@ nav img{
 .about p{
     text-indent: 50px;
     line-height: 30px;
-    padding: 0rem 7rem;
+    padding: 0rem 15rem 0rem 0rem;
 }
 
 .about p::first-letter { 
